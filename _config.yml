@@ -1,4 +1,10 @@
+theme: jekyll-theme-minimal
 title: Neutrine
-{% for file in site.static_files %}
-  {{ file.path }}
-{% endfor %}
+
+include:
+  - .well-known
+  
+defaults:
+  - scope:
+      path: ".well-known/nostr.json"
+      
